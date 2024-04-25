@@ -3,11 +3,11 @@ import { ref } from 'vue';
 import { userLogInStore } from '@/store/login'
 
 const signIn = userLogInStore();
-const { pushUserData } = userLogInStore();
+const { loginUserData } = userLogInStore();
 
 
 const sign= ()=>{
-  pushUserData({
+  loginUserData({
     email: login.value.email,
     password: login.value.password
   })
@@ -17,6 +17,7 @@ const login = ref({
   email:'',
   password: ''
 })
+
 const emailRules = [
   (value: string) => {
     if (value) return true;
@@ -42,11 +43,9 @@ const emailRules = [
                         <a href="#" class="text-[#ffa31a]">Forgot Password?</a>
                     </div>
                     <v-btn @click="sign" variant="tonal" color="#ffa31a" class="bg-[#ffa31a] text=black font-semibold mt-10 w-80">Log In</v-btn>
-                    
                 </v-container>
             </v-form>
         </div>
-
     </div>
 </template>
 

@@ -1,26 +1,18 @@
 import { defineStore } from 'pinia'
 import { reactive } from 'vue'
-/* export const userLogInStore = defineStore('login', () => {
-    const loginInfo = ref<string[][]>([])
 
-    function addSignIn(email: string, password: string) {
-        loginInfo.value.push([email, password]);
-    }
-
-    return { addSignIn, loginInfo }
-})
- */
-interface UserData {
+export interface UserData {
     email: string;
     password: string;
 }
 
 export const userLogInStore = defineStore('login', () => {
-    const loginInfo: UserData[] = reactive([]);
+    const loginInfo = reactive<UserData>({ email: '', password: '' });
 
-    function pushUserData(existingUser: UserData) {
-        loginInfo.push(existingUser);
+    function loginUserData(user: UserData) {
+        loginInfo.email = user.email;
+        loginInfo.password = user.password;
     }
 
-    return { pushUserData, loginInfo }
+    return { loginUserData, loginInfo }
 })

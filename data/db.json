@@ -1,18 +1,5 @@
 {
   "UserData": [
-    {
-      "id": "f7ce",
-      "firstName": "Charles",
-      "middleName": "Bernal",
-      "lastName": "Partosa",
-      "suffix": "Sr.",
-      "gender": "Male",
-      "mobileNumber": "32323232323",
-      "birthdate": "2024-04-09",
-      "age": "22",
-      "email": "asdasdas@gmail.com",
-      "password": "eqeqweqweqwe",
-      "dataconsent": true
-    }
+
   ]
 }
