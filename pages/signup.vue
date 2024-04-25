@@ -1,21 +1,18 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { userSignUpStore } from '@/store/signup'
+
 const signUp = userSignUpStore();
-const { pushUserData } = userSignUpStore()
-
-
-
-
+const { createUserData } = userSignUpStore()
 const create=()=>{
-  pushUserData({
+  createUserData({
     firstName: form.value.firstname,
     middleName: form.value.middlename,
     lastName: form.value.lastname,
     suffix: form.value.suffix,
     gender: form.value.gender,
     mobileNumber: form.value.number,
-    birthdate: new Date(form.value.birthdate),
+    birthdate: form.value.birthdate,
     age: form.value.age,
     email: form.value.email,
     password: form.value.password,
@@ -66,10 +63,7 @@ const emailRules = [
     return 'E-mail must be valid.';
   },
 ];
-
 </script>
-
-
 
 <template>
   <div>
