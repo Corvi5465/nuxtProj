@@ -2,7 +2,6 @@
 import { ref } from 'vue';
 import { userLogInStore } from '@/store/login'
 
-const signIn = userLogInStore();
 const { loginUserData } = userLogInStore();
 
 
